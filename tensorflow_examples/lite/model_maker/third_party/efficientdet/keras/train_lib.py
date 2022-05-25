@@ -275,7 +275,7 @@ def learning_rate_schedule(params):
                               params['second_lr_drop_step'])
 
   if lr_decay_method == 'cosine':
-    return CosineLrSchedule(params['adjusted_learning_rate'],
+    return CosineLrSchedule(params['learning_rate'],
                             params['lr_warmup_init'], params['lr_warmup_step'],
                             params['total_steps'])
 
