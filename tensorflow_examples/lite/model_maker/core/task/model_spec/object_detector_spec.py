@@ -102,10 +102,8 @@ class ExportModel(efficientdet_keras.EfficientDetModel):
     det_outputs = self._postprocess(outputs[0], outputs[1], scales,
                                     self.post_mode)
     outputs = det_outputs + outputs[2:]
-  
-    new_order = [1,3,0,2]
-    real_outputs = [outputs[index] for index in new_order]
-    return real_outputs
+
+    return outputs
 
 
 @mm_export('object_detector.EfficientDetSpec')
