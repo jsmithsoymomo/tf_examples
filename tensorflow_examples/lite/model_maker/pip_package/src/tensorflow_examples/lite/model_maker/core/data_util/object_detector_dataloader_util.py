@@ -352,8 +352,7 @@ def _get_xml_dict_from_csv_lines(images_dir: str, image_filename: str,
         'pose': 'Unspecified',
     }
     xml_dict['object'].append(obj)
-  if(len(xml_dict["object"]) == 0):
-    xml_dict.pop("object")
+
   return xml_dict
 
 
